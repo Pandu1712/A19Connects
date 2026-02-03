@@ -148,12 +148,12 @@ export default function GalleryPage() {
                 <p className="text-gray-600 text-sm">{item.description}</p>
 
                 {/* Hover CTA */}
-                <div className="mt-4 pt-4 border-t border-gray-200 opacity-0 group-hover:opacity-100 transition-opacity">
+                {/* <div className="mt-4 pt-4 border-t border-gray-200 opacity-0 group-hover:opacity-100 transition-opacity">
                   <button className="text-accent font-semibold text-sm hover:gap-2 transition-all flex items-center gap-1">
                     View Details
                     <span>→</span>
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
@@ -168,7 +168,7 @@ export default function GalleryPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-gray-50">
+     {/*  <section className="py-20 md:py-28 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-foreground mb-6">Impressed by Our Work?</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
@@ -183,7 +183,7 @@ export default function GalleryPage() {
           </a>
         </div>
       </section>
-
+ */}
     </main>
   );
 }

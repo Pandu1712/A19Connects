@@ -5,6 +5,7 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { StickyContact } from '@/components/sticky-contact';
 import { CheckCircle, ChevronRight } from 'lucide-react';
+import Image from "next/image";
 
 export default function NewsServicePage() {
   const packages = [
@@ -58,189 +59,175 @@ export default function NewsServicePage() {
     },
   ];
 
-  return (
-    <main className="min-h-screen bg-white">
-     
-      <StickyContact />
+ return (
+  <main className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white">
+    <StickyContact />
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <span className="text-sm font-semibold opacity-90">Premium Service</span>
-            <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-4">A19 News</h1>
-            <p className="text-xl text-gray-100 mb-8">
-              Healthcare Marketing Excellence - Comprehensive news coverage and media relations for hospitals and healthcare providers.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-primary font-bold rounded-lg hover:shadow-lg transition-all"
-            >
-              Enquire Now
-              <ChevronRight size={20} />
-            </Link>
-          </div>
-        </div>
-      </section>
+    {/* HERO */}
+    <section className="relative bg-gradient-to-r from-primary to-primary/80 text-white py-28">
+      <div className="max-w-7xl mx-auto px-6 max-w-4xl">
+        <p className="uppercase tracking-[6px] text-accent text-sm mb-4">
+          Statewide Media Network
+        </p>
+        <h1 className="text-6xl font-extrabold mb-6">A19 News</h1>
+        <p className="text-lg text-gray-200 leading-relaxed">
+          We publish, promote, and amplify news across the entire state through
+          our strong media presence, journalist network, and digital platforms.
+          From political coverage to business stories, events to public
+          announcements — A19 News ensures your message reaches every corner.
+        </p>
+      </div>
+    </section>
 
-      {/* Service Overview */}
-      <section className="py-20 md:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Elevate Your Healthcare Brand
-            </h2>
-            <p className="text-gray-600 mb-4">
-              In today's competitive healthcare market, media presence and patient trust are paramount. A19 News provides comprehensive news coverage and media relations solutions specifically designed for hospitals and healthcare institutions.
-            </p>
-            <p className="text-gray-600 mb-6">
-              Our expert team manages your healthcare narrative, builds credibility, and ensures your message reaches the right audience at the right time.
-            </p>
-          </div>
-          <div className="bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg p-8 flex items-center justify-center h-80">
-            <div className="text-6xl">📰</div>
-          </div>
-        </div>
-
-        {/* Key Features */}
-        <div className="bg-gray-50 rounded-lg p-8 md:p-12">
-          <h3 className="text-2xl font-bold text-foreground mb-8">What We Offer</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              'Press release distribution to 100+ media outlets',
-              'Healthcare news article writing and publication',
-              'Media interview coaching and representation',
-              'Social media content creation and scheduling',
-              'Monthly performance analytics and reporting',
-              'Crisis communication and reputation management',
-              'Industry event coverage and promotion',
-              'Patient testimonial stories and features',
-            ].map((feature, index) => (
-              <div key={index} className="flex items-start gap-3">
-                <CheckCircle size={20} className="text-accent mt-1 flex-shrink-0" />
-                <span className="text-foreground">{feature}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Packages */}
-      <section className="py-20 md:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Pricing Packages</h2>
-          <p className="text-lg text-gray-600">
-            Choose the perfect plan for your healthcare organization
+    {/* OVERVIEW */}
+    <section className="py-28 max-w-7xl mx-auto px-6">
+      <div className="grid md:grid-cols-2 gap-20 items-center">
+        <div>
+          <h2 className="text-5xl font-bold mb-8">Complete News & Media Coverage</h2>
+          <p className="text-gray-600 text-lg leading-relaxed mb-6">
+            A19 News operates as a powerful media bridge between organizations,
+            leaders, businesses, and the public. We ensure news visibility
+            through digital news portals, social platforms, and regional media
+            relationships.
+          </p>
+          <p className="text-gray-600 text-lg leading-relaxed">
+            Whether it’s a political announcement, business launch, public
+            event, or social cause — we provide statewide news reach with
+            professional reporting and promotion.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {packages.map((pkg, index) => (
-            <div
-              key={index}
-              className={`relative rounded-lg overflow-hidden transition-all duration-300 ${
-                pkg.popular
-                  ? 'ring-2 ring-accent shadow-2xl scale-105'
-                  : 'border border-gray-200 hover:shadow-lg'
-              } bg-white`}
-            >
-              {pkg.popular && (
-                <div className="absolute top-0 right-0 bg-accent text-primary px-4 py-1 text-sm font-bold rounded-bl-lg">
-                  POPULAR
-                </div>
-              )}
+        <div className="relative h-[380px] rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
+  <Image
+    src="https://scontent.fhyd14-4.fna.fbcdn.net/v/t39.30808-6/548500625_122128396862939304_2726733041647332082_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=XQq2aZLAMZYQ7kNvwHJRYPo&_nc_oc=Adm_NV2c-eRZLgtXXyt0smPZHOqfE4O5hgcDpdhoONLso-NYFCGS4vjhjxPAsj9ZnapZ7Ls_5mqWDlz_YxGxGIx_&_nc_zt=23&_nc_ht=scontent.fhyd14-4.fna&_nc_gid=lhttf7I63yu7CrsgOglPAw&oh=00_AftnYAPmDkCY4amKfSbt2Na_Kbtik4sAl3Ly9p1AFVDU7Q&oe=69879205"   // <-- put your image path here
+    alt="A19 News Coverage"
+    fill
+    className="object-cover"
+    priority
+  />
+</div>
 
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-foreground mb-2">{pkg.name}</h3>
-                <p className="text-gray-600 text-sm mb-6">{pkg.description}</p>
+      </div>
+    </section>
 
-                <div className="mb-8">
-                  <span className="text-4xl font-bold text-foreground">{pkg.price}</span>
-                  <span className="text-gray-600 ml-2">{pkg.period}</span>
-                </div>
+    {/* WHAT WE COVER */}
+    <section className="bg-gray-50 py-28">
+      <div className="max-w-7xl mx-auto px-6">
+        <h2 className="text-4xl font-bold text-center mb-16">
+          News Categories We Cover Across the State
+        </h2>
 
-                <button
-                  onClick={() => {
-                    const message = `I'm interested in the ${pkg.name} package of A19 News service. Please provide more details.`;
-                    window.open(
-                      `https://wa.me/919876543210?text=${encodeURIComponent(message)}`,
-                      '_blank'
-                    );
-                  }}
-                  className={`w-full px-6 py-3 font-bold rounded-lg transition-all duration-200 mb-8 ${
-                    pkg.popular
-                      ? 'bg-accent text-primary hover:shadow-lg'
-                      : 'bg-gray-100 text-foreground hover:bg-gray-200'
-                  }`}
-                >
-                  {pkg.popular ? 'Choose Package' : 'Learn More'}
-                </button>
-
-                <div className="space-y-4">
-                  {pkg.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-start gap-3">
-                      <CheckCircle size={18} className="text-accent mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-600 text-sm">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+        <div className="grid md:grid-cols-3 gap-10">
+          {[
+            "Political News & Leader Activities",
+            "Government Programs & Public Announcements",
+            "Business Launches & Corporate News",
+            "Real Estate & Infrastructure Developments",
+            "Education & Institutional Achievements",
+            "Social Causes & NGO Activities",
+            "Events, Press Meets & Public Meetings",
+            "Celebrity Visits & Public Appearances",
+            "Local Area & District Level Developments",
+          ].map((item, i) => (
+            <div key={i} className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+              <CheckCircle className="text-accent mb-4" />
+              <p className="text-gray-700 font-medium">{item}</p>
             </div>
           ))}
         </div>
-      </section>
+      </div>
+    </section>
 
-      {/* Success Stories */}
-      <section className="py-20 md:py-28 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-foreground mb-12 text-center">Client Success Stories</h2>
+    {/* HOW WE WORK */}
+    <section className="py-28 max-w-7xl mx-auto px-6">
+      <h2 className="text-4xl font-bold text-center mb-16">How A19 News Works</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                hospital: 'City Medical Center',
-                result: '150% increase in patient inquiries',
-                quote: 'A19 News transformed our media presence and patient trust.',
-              },
-              {
-                hospital: 'Regional Healthcare Group',
-                result: '200+ media mentions in 6 months',
-                quote: 'Professional and results-driven team. Highly recommended!',
-              },
-              {
-                hospital: 'Apollo Health Systems',
-                result: '85% social media engagement increase',
-                quote: 'Exceptional content and strategic approach to healthcare marketing.',
-              },
-            ].map((story, index) => (
-              <div key={index} className="bg-white rounded-lg p-8 hover:shadow-lg transition-shadow">
-                <p className="text-accent font-semibold text-lg mb-2">{story.result}</p>
-                <p className="text-foreground font-bold mb-4">{story.hospital}</p>
-                <p className="text-gray-600 italic">"{story.quote}"</p>
-              </div>
-            ))}
+      <div className="grid md:grid-cols-4 gap-10 text-center">
+        {[
+          ["Content Collection", "We gather complete details, images, and information"],
+          ["Professional Writing", "Our team crafts news in media-ready format"],
+          ["Media Distribution", "Published across portals and journalist network"],
+          ["Digital Amplification", "Promoted via social media and digital channels"],
+        ].map((step, i) => (
+          <div key={i}>
+            <div className="text-5xl font-bold text-primary mb-4">0{i + 1}</div>
+            <h3 className="text-xl font-semibold mb-2">{step[0]}</h3>
+            <p className="text-gray-600">{step[1]}</p>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </section>
 
-      {/* CTA */}
-      <section className="py-20 md:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-12 md:p-16 text-center text-white">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Enhance Your Healthcare Brand?</h2>
-          <p className="text-lg text-gray-200 max-w-2xl mx-auto mb-8">
-            Contact our team today for a personalized consultation and pricing quote.
+    {/* SAMPLE NEWS LINKS */}
+    <section className="bg-gray-50 py-28">
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className="text-4xl font-bold text-center mb-16">
+          Sample News Published by A19
+        </h2>
+
+        <div className="space-y-8">
+          {[
+            { title: "Leader Addressed Massive Public Meeting in Vijayawada", link: "#" },
+            { title: "Grand Opening of New Commercial Complex", link: "#" },
+            { title: "Mega Job Mela Conducted with 5000 Participants", link: "#" },
+            { title: "Educational Institution Achieves State Rank", link: "#" },
+          ].map((news, i) => (
+            <a
+              key={i}
+              href={news.link}
+              target="_blank"
+              className="flex justify-between items-center p-6 rounded-2xl border border-gray-200 hover:shadow-xl transition bg-white"
+            >
+              <span className="text-lg font-semibold text-foreground">
+                {news.title}
+              </span>
+              <ChevronRight />
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* TRUST STRIP */}
+    <section className="bg-primary text-white py-20">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-center">
+        {[
+          ["Statewide Journalist Network", "Strong relationships across districts"],
+          ["1000+ News Articles Published", "Covering multiple categories"],
+          ["Fast & Priority Publishing", "Timely coverage for important news"],
+        ].map((item, i) => (
+          <div key={i}>
+            <h3 className="text-2xl font-bold text-accent mb-3">{item[0]}</h3>
+            <p className="text-gray-200">{item[1]}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    {/* CTA */}
+    <section className="py-28 text-center">
+      <div className="max-w-4xl mx-auto px-6">
+        <div className="bg-gradient-to-r from-primary to-primary/80 text-white rounded-3xl p-16 shadow-2xl">
+          <h2 className="text-4xl font-bold mb-6">
+            Want Your News to Reach the Entire State?
+          </h2>
+          <p className="text-gray-200 mb-10">
+            Connect with A19 News team and get your story published across our
+            media network.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-primary font-bold rounded-lg hover:shadow-2xl transition-all duration-200 hover:scale-105"
+            className="inline-flex items-center gap-3 px-10 py-5 bg-accent text-primary font-bold rounded-xl hover:shadow-2xl hover:-translate-y-1 transition"
           >
-            Get Started Today
-            <ChevronRight size={20} />
+            Contact Our Team
+            <ChevronRight />
           </Link>
         </div>
-      </section>
+      </div>
+    </section>
 
-      
-    </main>
-  );
+
+  </main>
+);
+
 }

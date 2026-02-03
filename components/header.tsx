@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import clsx from 'clsx';
+import Image from "next/image";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,14 +31,22 @@ export function Header() {
         <div className="flex justify-between items-center h-20">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-11 h-11 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center shadow-md group-hover:scale-105 transition">
-              <span className="text-white font-bold text-lg">A19</span>
-            </div>
-            <span className="text-2xl font-extrabold tracking-tight text-primary hidden sm:block">
-              A19 Connects
-            </span>
-          </Link>
+         <Link href="/" className="flex items-center gap-3 group">
+  <div className="relative w-12 h-12 sm:w-14 sm:h-14">
+    <Image
+      src="/Logo.jpg"   // your logo path
+      alt="A19 Connects Logo"
+      fill
+      className="object-contain"
+      priority
+    />
+  </div>
+
+  <span className="text-2xl font-extrabold tracking-tight text-primary hidden sm:block">
+    A19 Connects
+  </span>
+</Link>
+
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-10">

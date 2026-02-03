@@ -5,6 +5,7 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { StickyContact } from '@/components/sticky-contact';
 import { CheckCircle, ChevronRight } from 'lucide-react';
+import Image from "next/image";
 
 export default function PropertiesServicePage() {
   const packages = [
@@ -59,188 +60,171 @@ export default function PropertiesServicePage() {
   ];
 
   return (
-    <main className="min-h-screen bg-white">
-     
-      <StickyContact />
+  <main className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white">
+    <StickyContact />
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-orange-600 to-orange-800 text-white py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <span className="text-sm font-semibold opacity-90">Premium Service</span>
-            <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-4">A19 Properties</h1>
-            <p className="text-xl text-gray-100 mb-8">
-              Strategic marketing and management solutions for residential and commercial properties.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-primary font-bold rounded-lg hover:shadow-lg transition-all"
-            >
-              Enquire Now
-              <ChevronRight size={20} />
-            </Link>
-          </div>
-        </div>
-      </section>
+    {/* HERO */}
+    <section className="bg-gradient-to-r from-primary to-primary/80 text-white py-28">
+      <div className="max-w-7xl mx-auto px-6 max-w-4xl">
+        <p className="uppercase tracking-[6px] text-accent text-sm mb-4">
+          Complete Real Estate Marketing Partner
+        </p>
+        <h1 className="text-6xl font-extrabold mb-6">A19 Properties</h1>
+        <p className="text-lg text-gray-200 leading-relaxed">
+          We market, promote, and generate qualified buyers for all types of
+          properties across the state — plots, villas, apartments, commercial
+          spaces, layouts, farmland, rentals, and resale properties.
+        </p>
+      </div>
+    </section>
 
-      {/* Service Overview */}
-      <section className="py-20 md:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Maximize Your Property Sales
-            </h2>
-            <p className="text-gray-600 mb-4">
-              Real estate success depends on visibility, presentation, and reaching the right buyers. A19 Properties combines cutting-edge marketing technology with proven real estate strategies to accelerate property sales and leasing.
-            </p>
-            <p className="text-gray-600 mb-6">
-              From professional photography to advanced targeting campaigns, we handle every aspect of property marketing so you can focus on closing deals.
-            </p>
-          </div>
-          <div className="bg-gradient-to-br from-orange-100 to-orange-50 rounded-lg p-8 flex items-center justify-center h-80">
-            <div className="text-6xl">🏢</div>
-          </div>
-        </div>
-
-        {/* Key Features */}
-        <div className="bg-gray-50 rounded-lg p-8 md:p-12">
-          <h3 className="text-2xl font-bold text-foreground mb-8">What We Offer</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              'Professional real estate photography',
-              '3D virtual tours and floor plans',
-              'Drone aerial photography',
-              'Property video marketing',
-              'Targeted buyer campaigns',
-              'Lead generation and tracking',
-              'Investment property analysis',
-              'Market research and insights',
-            ].map((feature, index) => (
-              <div key={index} className="flex items-start gap-3">
-                <CheckCircle size={20} className="text-accent mt-1 flex-shrink-0" />
-                <span className="text-foreground">{feature}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Packages */}
-      <section className="py-20 md:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Pricing Packages</h2>
-          <p className="text-lg text-gray-600">
-            Flexible plans tailored to your real estate needs
+    {/* OVERVIEW */}
+    <section className="py-28 max-w-7xl mx-auto px-6">
+      <div className="grid md:grid-cols-2 gap-20 items-center">
+        <div>
+          <h2 className="text-5xl font-bold mb-8">From Listing to Closing Deals</h2>
+          <p className="text-gray-600 text-lg leading-relaxed mb-6">
+            A19 Properties handles complete marketing and lead generation for
+            real estate projects and individual properties. We ensure your
+            property reaches genuine buyers through targeted campaigns,
+            professional presentation, and data-driven strategies.
+          </p>
+          <p className="text-gray-600 text-lg leading-relaxed">
+            Our goal is simple: bring serious buyers directly to you and help
+            you close deals faster.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {packages.map((pkg, index) => (
-            <div
-              key={index}
-              className={`relative rounded-lg overflow-hidden transition-all duration-300 ${
-                pkg.popular
-                  ? 'ring-2 ring-accent shadow-2xl scale-105'
-                  : 'border border-gray-200 hover:shadow-lg'
-              } bg-white`}
-            >
-              {pkg.popular && (
-                <div className="absolute top-0 right-0 bg-accent text-primary px-4 py-1 text-sm font-bold rounded-bl-lg">
-                  POPULAR
-                </div>
-              )}
+        <div className="relative h-[380px] rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
+  <Image
+    src="https://2acompany.co.in/assets/upload/WhatsApp_Image_2024-06-06_at_12_43_22_PM.jpeg"   // <-- put your image path here
+    alt="A19 News Coverage"
+    fill
+    className="object-cover"
+    priority
+  />
+</div>
 
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-foreground mb-2">{pkg.name}</h3>
-                <p className="text-gray-600 text-sm mb-6">{pkg.description}</p>
+      </div>
+    </section>
 
-                <div className="mb-8">
-                  <span className="text-4xl font-bold text-foreground">{pkg.price}</span>
-                  <span className="text-gray-600 ml-2">{pkg.period}</span>
-                </div>
+    {/* PROPERTY TYPES */}
+    <section className="bg-gray-50 py-28">
+      <div className="max-w-7xl mx-auto px-6">
+        <h2 className="text-4xl font-bold text-center mb-16">
+          Property Types We Market
+        </h2>
 
-                <button
-                  onClick={() => {
-                    const message = `I'm interested in the ${pkg.name} package of A19 Properties service. Please provide more details.`;
-                    window.open(
-                      `https://wa.me/919876543210?text=${encodeURIComponent(message)}`,
-                      '_blank'
-                    );
-                  }}
-                  className={`w-full px-6 py-3 font-bold rounded-lg transition-all duration-200 mb-8 ${
-                    pkg.popular
-                      ? 'bg-accent text-primary hover:shadow-lg'
-                      : 'bg-gray-100 text-foreground hover:bg-gray-200'
-                  }`}
-                >
-                  {pkg.popular ? 'Choose Package' : 'Learn More'}
-                </button>
-
-                <div className="space-y-4">
-                  {pkg.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-start gap-3">
-                      <CheckCircle size={18} className="text-accent mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-600 text-sm">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+        <div className="grid md:grid-cols-3 gap-10">
+          {[
+            "Open Plots & Layouts",
+            "Villas & Independent Houses",
+            "Apartments & Gated Communities",
+            "Commercial Buildings & Shops",
+            "Office Spaces & IT Parks",
+            "Farmland & Agricultural Lands",
+            "Rental & Lease Properties",
+            "Resale & Investment Properties",
+            "New Project Launches",
+          ].map((item, i) => (
+            <div key={i} className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+              <CheckCircle className="text-accent mb-4" />
+              <p className="text-gray-700 font-medium">{item}</p>
             </div>
           ))}
         </div>
-      </section>
+      </div>
+    </section>
 
-      {/* Success Stories */}
-      <section className="py-20 md:py-28 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-foreground mb-12 text-center">Client Success Stories</h2>
+    {/* WHAT WE DO */}
+    <section className="py-28 max-w-7xl mx-auto px-6">
+      <h2 className="text-4xl font-bold text-center mb-16">
+        Complete Real Estate Marketing Services
+      </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                client: 'Royal Estates Group',
-                result: '45 properties sold in 3 months',
-                quote: 'Outstanding marketing strategy. Our properties sold faster than ever!',
-              },
-              {
-                client: 'Metro Builders',
-                result: '₹50 crore portfolio marketed',
-                quote: 'Professional approach with measurable results and transparency.',
-              },
-              {
-                client: 'Luxury Homes Co.',
-                result: '200% increase in qualified leads',
-                quote: 'A19 Properties elevated our premium property marketing.',
-              },
-            ].map((story, index) => (
-              <div key={index} className="bg-white rounded-lg p-8 hover:shadow-lg transition-shadow">
-                <p className="text-accent font-semibold text-lg mb-2">{story.result}</p>
-                <p className="text-foreground font-bold mb-4">{story.client}</p>
-                <p className="text-gray-600 italic">"{story.quote}"</p>
-              </div>
-            ))}
+      <div className="grid md:grid-cols-3 gap-10">
+        {[
+          "Professional property photography & videography",
+          "Drone aerial photography & site videos",
+          "3D virtual tours and walkthroughs",
+          "Brochure, hoarding, and creative designs",
+          "Facebook, Instagram & Google Ads campaigns",
+          "Buyer lead generation and qualification",
+          "Landing pages and property microsites",
+          "SEO for property visibility in search",
+          "Daily lead reports and performance tracking",
+        ].map((item, i) => (
+          <div key={i} className="bg-gray-50 p-8 rounded-2xl border border-gray-200">
+            <CheckCircle className="text-accent mb-4" />
+            <p className="text-gray-700 font-medium">{item}</p>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </section>
 
-      {/* CTA */}
-      <section className="py-20 md:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-12 md:p-16 text-center text-white">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Sell Your Properties Faster?</h2>
-          <p className="text-lg text-gray-200 max-w-2xl mx-auto mb-8">
-            Let our real estate marketing experts help you maximize property sales.
+    {/* HOW WE WORK */}
+    <section className="bg-gray-50 py-28">
+      <div className="max-w-7xl mx-auto px-6">
+        <h2 className="text-4xl font-bold text-center mb-16">How A19 Properties Works</h2>
+
+        <div className="grid md:grid-cols-4 gap-10 text-center">
+          {[
+            ["Property Analysis", "We study location, price, and target buyers"],
+            ["Professional Presentation", "Photos, videos, creatives, and landing page"],
+            ["Targeted Advertising", "Ads to genuine interested buyers"],
+            ["Lead Delivery", "Qualified leads sent directly to you daily"],
+          ].map((step, i) => (
+            <div key={i}>
+              <div className="text-5xl font-bold text-primary mb-4">0{i + 1}</div>
+              <h3 className="text-xl font-semibold mb-2">{step[0]}</h3>
+              <p className="text-gray-600">{step[1]}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SUCCESS HIGHLIGHTS */}
+    <section className="py-28 max-w-7xl mx-auto px-6">
+      <h2 className="text-4xl font-bold text-center mb-16">Our Real Estate Impact</h2>
+
+      <div className="grid md:grid-cols-3 gap-10 text-center">
+        {[
+          ["500+ Properties Marketed", "Across multiple districts"],
+          ["10,000+ Buyer Leads Generated", "Through digital campaigns"],
+          ["Faster Property Closures", "With genuine buyer inquiries"],
+        ].map((item, i) => (
+          <div key={i} className="bg-white p-10 rounded-2xl shadow-xl border border-gray-200">
+            <h3 className="text-2xl font-bold text-accent mb-3">{item[0]}</h3>
+            <p className="text-gray-600">{item[1]}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    {/* CTA */}
+    <section className="py-28 text-center">
+      <div className="max-w-4xl mx-auto px-6">
+        <div className="bg-gradient-to-r from-primary to-primary/80 text-white rounded-3xl p-16 shadow-2xl">
+          <h2 className="text-4xl font-bold mb-6">
+            Want to Sell or Promote Your Property Faster?
+          </h2>
+          <p className="text-gray-200 mb-10">
+            Connect with A19 Properties and get genuine buyers for your listings.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-primary font-bold rounded-lg hover:shadow-2xl transition-all duration-200 hover:scale-105"
+            className="inline-flex items-center gap-3 px-10 py-5 bg-accent text-primary font-bold rounded-xl hover:shadow-2xl hover:-translate-y-1 transition"
           >
-            Get Started Today
-            <ChevronRight size={20} />
+            Contact Our Team
+            <ChevronRight />
           </Link>
         </div>
-      </section>
+      </div>
+    </section>
 
-     
-    </main>
-  );
+    
+  </main>
+);
+
 }

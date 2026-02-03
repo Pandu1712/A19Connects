@@ -12,76 +12,77 @@ import ContactPage from './contact/page';
 
 export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
+const slides = [
+  {
+    title: 'A19 News',
+    subtitle: 'Statewide News & Media Coverage',
+    description:
+      'We publish and promote news across the state through our journalist network, media portals, and digital platforms for leaders, organizations, and businesses.',
+    image:
+      'https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=2070&auto=format&fit=crop',
+  },
+  {
+    title: 'A19 Properties',
+    subtitle: 'Complete Real Estate Marketing',
+    description:
+      'End-to-end marketing for plots, villas, apartments, commercial spaces, layouts, and resale properties to generate genuine buyer leads.',
+    image:
+      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2070&auto=format&fit=crop',
+  },
+  {
+    title: 'A19 Campaign',
+    subtitle: 'Election Campaign & Political Branding',
+    description:
+      'Full election campaign management, political leader branding, booth-level strategy, digital promotion, ground activities, and voter surveys.',
+    image:
+      'https://images.unsplash.com/photo-1541872703-74c5e44368f9?q=80&w=2070&auto=format&fit=crop',
+  },
+  {
+    title: 'A19 Digital Marketing',
+    subtitle: 'Social Media, Ads & SEO',
+    description:
+      'Complete digital marketing including SEO, Google Ads, social media handling, content creation, and performance analytics (excluding website development).',
+    image:
+      'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2070&auto=format&fit=crop',
+  },
+];
 
-  const slides = [
-    {
-      title: 'A19 News',
-      subtitle: 'Healthcare Marketing Excellence',
-      description:
-        'Comprehensive news and media solutions for hospitals and healthcare organizations.',
-      image:
-        'https://images.unsplash.com/photo-1581090700227-1e8a1f5b8a9c?q=80&w=2070&auto=format&fit=crop',
-    },
-    {
-      title: 'A19 Properties',
-      subtitle: 'Real Estate Solutions',
-      description:
-        'Premier property marketing and management services across South India.',
-      image:
-        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop',
-    },
-    {
-      title: 'A19 Campaign',
-      subtitle: 'Strategic Campaigns',
-      description:
-        'Targeted marketing campaigns designed to boost your brand presence.',
-      image:
-        'https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2070&auto=format&fit=crop',
-    },
-    {
-      title: 'A19 Digital Marketing',
-      subtitle: 'Digital Excellence',
-      description:
-        'End-to-end digital marketing services for modern businesses.',
-      image:
-        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
-    },
-  ];
 
   const services = [
-    {
-      title: 'A19 News',
-      description:
-        'Healthcare news and media coverage for hospitals and medical institutions.',
-      href: '/services/news',
-      image:
-        'https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=1200&auto=format&fit=crop',
-    },
-    {
-      title: 'A19 Properties',
-      description:
-        'Real estate marketing and property management solutions.',
-      href: '/services/properties',
-      image:
-        'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop',
-    },
-    {
-      title: 'A19 Campaign',
-      description:
-        'Strategic marketing campaigns for maximum brand impact.',
-      href: '/services/campaign',
-      image:
-        'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop',
-    },
-    {
-      title: 'A19 Digital Marketing',
-      description:
-        'Complete digital marketing strategies and implementation.',
-      href: '/services/digital',
-      image:
-        'https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1200&auto=format&fit=crop',
-    },
-  ];
+  {
+    title: 'A19 News',
+    description:
+      'Statewide news publication and media coverage through our journalist network, press distribution, and digital promotion for leaders, organizations, and businesses.',
+    href: '/services/news',
+    image:
+      'https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=1200&auto=format&fit=crop',
+  },
+  {
+    title: 'A19 Properties',
+    description:
+      'Complete real estate marketing for plots, villas, apartments, commercial spaces, layouts, farmland, rentals, and resale properties to generate genuine buyer leads.',
+    href: '/services/properties',
+    image:
+      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop',
+  },
+  {
+    title: 'A19 Campaign',
+    description:
+      'Election campaign management, political leader branding, booth-level planning, digital promotion, ground activities, and voter survey intelligence.',
+    href: '/services/campaign',
+    image:
+      'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop',
+  },
+  {
+    title: 'A19 Digital Marketing',
+    description:
+      'SEO, Google Ads, social media handling, content creation, and performance analytics for brands and leaders — excluding website development.',
+    href: '/services/digital',
+    image:
+      'https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1200&auto=format&fit=crop',
+  },
+];
+
 
   // Auto slide
   useEffect(() => {
