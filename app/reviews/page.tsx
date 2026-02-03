@@ -6,98 +6,99 @@ import { StickyContact } from '@/components/sticky-contact';
 import { Star } from 'lucide-react';
 
 export default function ReviewsPage() {
-  const reviews = [
-    {
-      id: 1,
-      name: 'Dr. Rajesh Sharma',
-      title: 'CEO, City Medical Center',
-      location: 'Bangalore',
-      rating: 5,
-      review:
-        'A19 News transformed our healthcare brand presence. The team is professional, results-driven, and truly understands the healthcare sector. Highly recommended!',
-      service: 'A19 News',
-    },
-    {
-      id: 2,
-      name: 'Priya Desai',
-      title: 'Founder, Royal Estates',
-      location: 'Pune',
-      rating: 5,
-      review:
-        'Working with A19 Properties was a game-changer for our real estate business. Our property sales increased by 45% in just 3 months. Outstanding service!',
-      service: 'A19 Properties',
-    },
-    {
-      id: 3,
-      name: 'Amit Gupta',
-      title: 'Managing Director, TechStart India',
-      location: 'Bangalore',
-      rating: 5,
-      review:
-        'The A19 Campaign team created an innovative marketing campaign that exceeded all expectations. ROI was 350%! Simply exceptional work.',
-      service: 'A19 Campaign',
-    },
-    {
-      id: 4,
-      name: 'Anjali Patel',
-      title: 'Head of Marketing, Fashion Plus',
-      location: 'Chennai',
-      rating: 5,
-      review:
-        'A19 Digital Marketing provided comprehensive digital solutions that transformed our online presence. Website traffic increased by 280%!',
-      service: 'A19 Digital Marketing',
-    },
-    {
-      id: 5,
-      name: 'Dr. Vikram Kumar',
-      title: 'Administrator, Apollo Health Systems',
-      location: 'Hyderabad',
-      rating: 5,
-      review:
-        'The professionalism and expertise of the A19 team is unmatched. They delivered results that significantly improved our hospital\'s brand credibility.',
-      service: 'A19 News',
-    },
-    {
-      id: 6,
-      name: 'Meera Singh',
-      title: 'Director, Metro Builders',
-      location: 'Bangalore',
-      rating: 5,
-      review:
-        'A19 Properties handled our ₹50 crore portfolio with exceptional expertise. The virtual tours and targeted campaigns were incredibly effective.',
-      service: 'A19 Properties',
-    },
-    {
-      id: 7,
-      name: 'Suresh Reddy',
-      title: 'CEO, Wellness Plus',
-      location: 'Telangana',
-      rating: 5,
-      review:
-        'The campaign strategy was brilliant and data-driven. A19 Campaign generated over 10,000 qualified leads for us. Best investment ever!',
-      service: 'A19 Campaign',
-    },
-    {
-      id: 8,
-      name: 'Kavya Sharma',
-      title: 'Founder, E-Commerce Ventures',
-      location: 'Bangalore',
-      rating: 5,
-      review:
-        'A19 Digital Marketing is truly world-class. They transformed our online sales by 300% through strategic SEO, PPC, and content marketing.',
-      service: 'A19 Digital Marketing',
-    },
-    {
-      id: 9,
-      name: 'Dr. Naveen Kumar',
-      title: 'Head of Marketing, Regional Healthcare',
-      location: 'Mysore',
-      rating: 5,
-      review:
-        'A19 News provided exceptional media relations and press coverage for our healthcare group. Patient inquiries increased significantly!',
-      service: 'A19 News',
-    },
-  ];
+ const reviews = [
+  {
+    id: 1,
+    name: 'Dr. Sandeep Reddy',
+    title: 'Medical Director, Sunrise Hospitals',
+    location: 'Vijayawada, Andhra Pradesh',
+    rating: 5,
+    review:
+      'A19 News significantly improved our hospital’s media visibility across AP. Their press coverage and reputation management brought a noticeable rise in patient trust and inquiries.',
+    service: 'A19 News',
+  },
+  {
+    id: 2,
+    name: 'Dr. Lakshmi Prasad',
+    title: 'Administrator, Care Multispeciality Hospital',
+    location: 'Guntur, Andhra Pradesh',
+    rating: 5,
+    review:
+      'Professional media handling and timely news publications helped us build strong credibility in the region. A19 News understands healthcare communication perfectly.',
+    service: 'A19 News',
+  },
+  {
+    id: 3,
+    name: 'Ravi Teja Chowdary',
+    title: 'Managing Partner, Teja Constructions',
+    location: 'Visakhapatnam, Andhra Pradesh',
+    rating: 5,
+    review:
+      'A19 Properties created stunning drone videos and campaigns for our gated community project. Lead quality improved drastically and sales accelerated.',
+    service: 'A19 Properties',
+  },
+  {
+    id: 4,
+    name: 'Sowmya Reddy',
+    title: 'Sales Director, Reddy Realty Group',
+    location: 'Tirupati, Andhra Pradesh',
+    rating: 5,
+    review:
+      'Virtual tours and targeted property campaigns delivered by A19 Properties helped us close multiple premium units within weeks.',
+    service: 'A19 Properties',
+  },
+  {
+    id: 5,
+    name: 'Mahesh Yadav',
+    title: 'Campaign Strategist, Public Leadership Initiative',
+    location: 'Hyderabad, Telangana',
+    rating: 5,
+    review:
+      'A19 Campaign managed our political outreach with precision. Booth-level strategy, digital creatives, and ground surveys gave us excellent voter engagement.',
+    service: 'A19 Campaign',
+  },
+  {
+    id: 6,
+    name: 'Anusha Naik',
+    title: 'Communications Head, Youth Development Forum',
+    location: 'Warangal, Telangana',
+    rating: 5,
+    review:
+      'Their election campaign planning, poster designs, and social media narratives created strong public visibility for our leader across the district.',
+    service: 'A19 Campaign',
+  },
+  {
+    id: 7,
+    name: 'Harish Kumar',
+    title: 'Founder, TrendKart E-Commerce',
+    location: 'Hyderabad, Telangana',
+    rating: 5,
+    review:
+      'A19 Digital Marketing handled our SEO and paid ads brilliantly. Monthly sales increased by 280% without any website redevelopment.',
+    service: 'A19 Digital Marketing',
+  },
+  {
+    id: 8,
+    name: 'Divya Praneeth',
+    title: 'Marketing Manager, FreshMart Retail',
+    location: 'Khammam, Telangana',
+    rating: 5,
+    review:
+      'Their social media management and ad campaigns brought excellent footfall and online engagement for our retail brand.',
+    service: 'A19 Digital Marketing',
+  },
+  {
+    id: 9,
+    name: 'Dr. Praveen Kumar',
+    title: 'Chairman, LifeCare Hospitals',
+    location: 'Kurnool, Andhra Pradesh',
+    rating: 5,
+    review:
+      'With A19 News support, our hospital gained consistent regional media presence which directly improved brand authority and patient reach.',
+    service: 'A19 News',
+  },
+];
+
 
   const StarRating = ({ rating }: { rating: number }) => (
     <div className="flex gap-1">
