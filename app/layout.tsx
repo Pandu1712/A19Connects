@@ -18,8 +18,29 @@ export const metadata: Metadata = {
     default: "A19 Connects | Premium Marketing Solutions",
     template: "%s | A19 Connects",
   },
+
   description:
     "A19 News, Properties, Campaign & Digital Marketing solutions.",
+
+  icons: {
+    icon: "/Logo.jpg",
+    shortcut: "/Logo.jpg",
+    apple: "/Logo.jpg",
+  },
+
+  openGraph: {
+    title: "A19 Connects | Premium Marketing Solutions",
+    description:
+      "A19 News, Properties, Campaign & Digital Marketing solutions.",
+    images: [
+      {
+        url: "/Logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "A19 Connects",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -31,15 +52,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${poppins.className} bg-background text-foreground`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          
-          {/* ✅ Default Header */}
           <Header />
-
           {children}
-
-          {/* ✅ Default Footer */}
           <Footer />
-
         </ThemeProvider>
         <Analytics />
       </body>

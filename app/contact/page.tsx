@@ -38,7 +38,7 @@ export default function ContactPage() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const whatsappNumber = '919876543210';
+    const whatsappNumber = '919966202419';
     const message = `
 Hello A19 Connects,
 
@@ -100,19 +100,19 @@ return (
           {
             icon: <Mail size={30} />,
             title: 'Email Us',
-            desc: 'info@a19connects.com',
-            link: 'mailto:info@a19connects.com',
+            desc: 'a19connects@gmail.com',
+            link: 'mailto:a19connects@gmail.com',
           },
           {
             icon: <Phone size={30} />,
             title: 'Call Us',
-            desc: '+91 98765 43210',
-            link: 'tel:+919876543210',
+            desc: '+91 9966202419',
+            link: 'tel:+919966202419',
           },
           {
             icon: <MapPin size={30} />,
             title: 'Visit Us',
-            desc: 'Bangalore, India',
+            desc: 'Vijayawada-Prasadampadu-521108, India',
             link: '#',
           },
         ].map((item, i) => (

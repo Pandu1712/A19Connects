@@ -6,6 +6,7 @@ import { Footer } from '@/components/footer';
 import { StickyContact } from '@/components/sticky-contact';
 import { CheckCircle, ChevronRight } from 'lucide-react';
 import Image from "next/image";
+import React from 'react';
 
 export default function NewsServicePage() {
   const packages = [
@@ -58,6 +59,31 @@ export default function NewsServicePage() {
       popular: false,
     },
   ];
+const [showForm, setShowForm] = React.useState(false);
+
+const openWhatsApp = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  const form = e.currentTarget;
+  const name = (form.elements.namedItem("name") as HTMLInputElement).value;
+  const mobile = (form.elements.namedItem("mobile") as HTMLInputElement).value;
+  const address = (form.elements.namedItem("address") as HTMLInputElement).value;
+  const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
+
+  const text = `
+*New News Service Enquiry*
+
+Service: A19 News
+
+Name: ${name}
+Mobile: ${mobile}
+Address: ${address}
+Message: ${message}
+`;
+
+  const url = `https://wa.me/919966202419?text=${encodeURIComponent(text)}`;
+  window.open(url, "_blank");
+};
 
  return (
   <main className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white">
@@ -77,6 +103,15 @@ export default function NewsServicePage() {
           announcements — A19 News ensures your message reaches every corner.
         </p>
       </div>
+      <div className="mt-8 flex justify-center">
+  <button
+    onClick={() => setShowForm(true)}
+    className="px-8 py-4 bg-accent text-primary font-bold rounded-xl"
+  >
+    Enquiry Now
+  </button>
+</div>
+
     </section>
 
     {/* OVERVIEW */}
@@ -215,17 +250,67 @@ export default function NewsServicePage() {
             Connect with A19 News team and get your story published across our
             media network.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-accent text-primary font-bold rounded-xl hover:shadow-2xl hover:-translate-y-1 transition"
-          >
-            Contact Our Team
-            <ChevronRight />
-          </Link>
+         <div className="mt-8 flex justify-center">
+  <button
+    onClick={() => setShowForm(true)}
+    className="px-8 py-4 bg-accent text-primary font-bold rounded-xl"
+  >
+    Enquiry Now
+  </button>
+</div>
+
         </div>
       </div>
     </section>
 
+{showForm && (
+  <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
+    <div className="bg-white w-full max-w-lg rounded-2xl p-8 relative">
+      <button
+        onClick={() => setShowForm(false)}
+        className="absolute top-3 right-4 text-xl font-bold"
+      >
+        ×
+      </button>
+
+      <h3 className="text-2xl font-bold mb-6">News Service Enquiry</h3>
+
+      <form onSubmit={openWhatsApp} className="space-y-4">
+        <input
+          name="name"
+          required
+          placeholder="Your Name"
+          className="w-full border p-3 rounded-lg"
+        />
+        <input
+          name="mobile"
+          required
+          placeholder="Mobile Number"
+          className="w-full border p-3 rounded-lg"
+        />
+        <input
+          name="address"
+          required
+          placeholder="Address"
+          className="w-full border p-3 rounded-lg"
+        />
+        <textarea
+          name="message"
+          required
+          placeholder="Your Message"
+          className="w-full border p-3 rounded-lg"
+        />
+
+        <button
+          type="submit"
+          className="w-full bg-green-600 text-white py-3 rounded-lg font-bold"
+        >
+          Send to WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+)}
 
   </main>
 );

@@ -11,7 +11,7 @@ export function Footer() {
     { icon: Instagram, href: 'https://instagram.com/a19connects', label: 'Instagram' },
     { icon: Twitter, href: 'https://twitter.com/a19connects', label: 'Twitter' },
     { icon: Youtube, href: 'https://youtube.com/a19connects', label: 'YouTube' },
-    { icon: MessageCircle, href: 'https://wa.me/919876543210', label: 'WhatsApp' },
+    { icon: MessageCircle, href: 'https://wa.me/919966202419', label: 'WhatsApp' },
   ];
 
   const services = [
@@ -45,19 +45,19 @@ export function Footer() {
             <div className="space-y-2 pt-2">
               <div className="flex items-center gap-2 text-gray-300">
                 <Mail size={18} className="text-accent" />
-                <a href="mailto:info@a19connects.com" className="hover:text-accent transition-colors">
-                  info@a19connects.com
+                <a href="mailto:a19connects@gmail.com" className="hover:text-accent transition-colors">
+                  a19connects@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-2 text-gray-300">
                 <Phone size={18} className="text-accent" />
-                <a href="tel:+919876543210" className="hover:text-accent transition-colors">
-                  +91 98765 43210
+                <a href="tel:+919966202419" className="hover:text-accent transition-colors">
+                  +91 9966202419
                 </a>
               </div>
               <div className="flex items-start gap-2 text-gray-300">
                 <MapPin size={18} className="text-accent mt-1 flex-shrink-0" />
-                <span className="text-sm">Bangalore, India</span>
+                <span className="text-sm">Vijayawada,Prasadampadu-521108 India</span>
               </div>
             </div>
           </div>
@@ -91,26 +91,117 @@ export function Footer() {
           </div>
 
           {/* Social Media */}
-          <div>
-            <h3 className="text-lg font-bold mb-4 text-accent">Follow Us</h3>
-            <div className="flex flex-wrap gap-3">
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
-                return (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 bg-accent text-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform"
-                    aria-label={social.label}
-                  >
-                    <Icon size={20} />
-                  </a>
-                );
-              })}
-            </div>
-          </div>
+          {/* Social Media */}
+<div>
+  <h3 className="text-lg font-bold mb-4 text-accent">Follow Us</h3>
+
+  <div className="space-y-6">
+
+    {/* A19 Connects */}
+    <div>
+      <p className="text-sm text-gray-400 mb-2 font-semibold">A19 Digital Marketing</p>
+      <div className="flex flex-wrap gap-3">
+        {[
+         /*  { icon: Facebook, href: 'https://facebook.com/a19connects', label: 'Facebook' },
+          { icon: Instagram, href: 'https://instagram.com/a19connects', label: 'Instagram' }, */
+          { icon: Youtube, href: 'https://www.youtube.com/@a19digitalmarketing', label: 'Youtube' },
+        ].map((social) => {
+          const Icon = social.icon;
+          return (
+            <a
+              key={social.label}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.label}
+              className="w-10 h-10 bg-accent text-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+            >
+              <Icon size={20} />
+            </a>
+          );
+        })}
+      </div>
+    </div>
+
+    {/* A19 News */}
+    <div>
+      <p className="text-sm text-gray-400 mb-2 font-semibold">A19 News</p>
+      <div className="flex flex-wrap gap-3">
+        {[
+          { icon: Youtube, href: 'https://youtube.com/@a19news?si=pO23WPbs7Zwc21SP', label: 'YouTube' },
+          { icon: Facebook, href: 'https://www.facebook.com/share/16Tvizs91a/', label: 'Facebook' },
+          { icon: Instagram, href: 'https://www.instagram.com/a19news?igsh=ODhxMmU2YWRybWNo', label: 'Instagram' },
+        ].map((social) => {
+          const Icon = social.icon;
+          return (
+            <a
+              key={social.label}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.label}
+              className="w-10 h-10 bg-accent text-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+            >
+              <Icon size={20} />
+            </a>
+          );
+        })}
+      </div>
+    </div>
+
+    {/* A19 Properties */}
+    <div>
+      <p className="text-sm text-gray-400 mb-2 font-semibold">A19 Properties</p>
+      <div className="flex flex-wrap gap-3">
+        {[
+          { icon: Instagram, href: 'https://www.instagram.com/a19properties?igsh=bzBtZzVva3M0bDc=', label: 'Instagram' },
+          { icon: Youtube, href: 'https://www.youtube.com/@a19properties', label: 'Youtube' },
+        ].map((social) => {
+          const Icon = social.icon;
+          return (
+            <a
+              key={social.label}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.label}
+              className="w-10 h-10 bg-accent text-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+            >
+              <Icon size={20} />
+            </a>
+          );
+        })}
+      </div>
+    </div>
+
+    {/* A19 Campaign */}
+    <div>
+      <p className="text-sm text-gray-400 mb-2 font-semibold">A19 Campaign</p>
+      <div className="flex flex-wrap gap-3">
+        {[
+          { icon: MessageCircle, href: 'https://wa.me/919966202419', label: 'WhatsApp' },
+          { icon: Facebook, href: 'https://facebook.com/a19campaign', label: 'Facebook' },
+        ].map((social) => {
+          const Icon = social.icon;
+          return (
+            <a
+              key={social.label}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.label}
+              className="w-10 h-10 bg-accent text-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+            >
+              <Icon size={20} />
+            </a>
+          );
+        })}
+      </div>
+    </div>
+
+  </div>
+</div>
+
         </div>
       </div>
 

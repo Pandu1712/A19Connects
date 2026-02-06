@@ -7,8 +7,8 @@ export function StickyContact() {
   const [showTooltipWhatsApp, setShowTooltipWhatsApp] = useState(false);
   const [showTooltipCall, setShowTooltipCall] = useState(false);
 
-  const whatsappNumber = '919876543210';
-  const phoneNumber = '+919876543210';
+  const whatsappNumber = '919966202419';
+  const phoneNumber = '+919966202419';
   const defaultMessage = 'Hello A19 Connects, I would like to inquire about your services.';
 
   return (

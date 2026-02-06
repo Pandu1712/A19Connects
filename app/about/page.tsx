@@ -17,9 +17,14 @@ export default function AboutPage() {
       image: "https://res.cloudinary.com/dd4oiwnep/image/upload/WhatsApp_Image_2026-02-03_at_16.31.39_hycizj.jpg",
     },
     {
-      name: "Amit Patel",
+      name: "K RajKumar",
       role: "Head of Digital",
       image: "https://res.cloudinary.com/dd4oiwnep/image/upload/WhatsApp_Image_2026-02-03_at_16.33.01_e7zt1d.jpg",
+    },
+     {
+      name: "G Madhav",
+      role: "Head of Operations",
+      image: "https://res.cloudinary.com/dd4oiwnep/image/upload/WhatsApp_Image_2026-02-04_at_10.40.54_xvndxr.jpg",
     },
   ];
 
